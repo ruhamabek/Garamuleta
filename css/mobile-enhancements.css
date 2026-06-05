@@ -701,28 +701,10 @@
    NAVIGATION MOBILE ENHANCEMENTS
    ======================================== */
 
-@media (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: flex !important;
-        flex-direction: column;
-        gap: 4px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-        z-index: 1001;
-    }
-    
-    .mobile-menu-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background: #1e3a5f;
-        transition: all 0.3s ease;
-    }
-    
+@media (max-width: 992px) {
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
+        background: var(--hero-yellow);
     }
     
     .mobile-menu-toggle.active span:nth-child(2) {
@@ -731,60 +713,7 @@
     
     .mobile-menu-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 280px;
-        height: 100vh;
-        background: white;
-        flex-direction: column;
-        padding: 5rem 2rem 2rem;
-        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        transition: right 0.3s ease;
-        z-index: 1000;
-        overflow-y: auto;
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .nav-menu li {
-        width: 100%;
-        margin: 0;
-    }
-    
-    .nav-menu a {
-        display: block;
-        padding: 1rem;
-        font-size: 1.1rem;
-        border-bottom: 1px solid #f0f0f0;
-    }
-    
-    .nav-menu .btn-contact {
-        margin-top: 1rem;
-        text-align: center;
-        border-radius: 8px;
-        border: none;
-    }
-    
-    /* Mobile menu overlay */
-    .mobile-menu-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0,0,0,0.5);
-        z-index: 999;
-    }
-    
-    .mobile-menu-overlay.active {
-        display: block;
+        background: var(--hero-yellow);
     }
 }
 

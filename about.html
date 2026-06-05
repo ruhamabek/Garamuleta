@@ -10,30 +10,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Navigation (floating pill) -->
+    <div class="nav-pill-wrap">
         <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <h1>GARA</h1>
-                    <span>Construction Solutions PLC</span>
-                </div>
+            <nav class="nav-pill">
+                <a href="index.html" class="nav-pill-logo">
+                    <span class="logo-mark">G</span>
+                    <span class="logo-text">GARA</span>
+                </a>
+                <ul class="nav-pill-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="products.html">Our Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Sustainability</a></li>
+                    <li><a href="contact.html">Careers</a></li>
+                </ul>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="products.html">Products & Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html" class="btn-contact">Contact Us</a></li>
-                </ul>
-            </div>
+                <a href="contact.html" class="nav-pill-cta">
+                    <span>Contact Us</span>
+                    <span class="nav-pill-cta-icon"><i class="fas fa-phone"></i></span>
+                </a>
+            </nav>
         </div>
-    </nav>
+    </div>
     
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>

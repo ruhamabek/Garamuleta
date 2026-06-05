@@ -10,52 +10,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Navigation (floating pill) -->
+    <div class="nav-pill-wrap">
         <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <h1>GARA</h1>
-                    <span>Construction Solutions PLC</span>
-                </div>
+            <nav class="nav-pill">
+                <a href="index.html" class="nav-pill-logo">
+                    <span class="logo-mark">G</span>
+                    <span class="logo-text">GARA</span>
+                </a>
+                <ul class="nav-pill-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Our Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Sustainability</a></li>
+                    <li><a href="contact.html" class="active">Careers</a></li>
+                </ul>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Products & Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html" class="btn-contact active">Contact Us</a></li>
-                </ul>
-            </div>
+                <a href="contact.html" class="nav-pill-cta">
+                    <span>Contact Us</span>
+                    <span class="nav-pill-cta-icon"><i class="fas fa-phone"></i></span>
+                </a>
+            </nav>
         </div>
-    </nav>
+    </div>
     
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
     <!-- Page Header -->
-    <section class="page-banner">
-        <div class="banner-content">
-            <span class="banner-label">Get In Touch</span>
-            <h1 class="banner-title">Contact<br><span class="gradient-text">Our Team</span></h1>
-            <p class="banner-subtitle">Let's discuss your next construction project together</p>
+    <section class="page-banner-editorial">
+        <div class="container">
+            <div class="banner-editorial-header">
+                <div class="banner-editorial-text">
+                    <span class="banner-editorial-eyebrow">— GET IN TOUCH —</span>
+                    <h1 class="banner-editorial-title">Contact Our Team</h1>
+                </div>
+                <p class="banner-editorial-sub">
+                    Let's discuss your next construction project together — from new builds to renovations, our experts are ready to help.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="container">
+            <div class="contact-header">
+                <div class="contact-header-text">
+                    <span class="contact-eyebrow">— SEND A MESSAGE —</span>
+                    <h2 class="contact-title">Let's build something together</h2>
+                </div>
+                <p class="contact-sub">
+                    Fill out the form and our team will get back to you within 24 hours. For urgent inquiries, call us directly.
+                </p>
+            </div>
             <div class="contact-grid">
                 <!-- Contact Form -->
-                <div class="contact-form-wrapper">
-                    <h2>Send Us a Message</h2>
-                    <p>Fill out the form below and our team will get back to you within 24 hours</p>
-                    
+                <div class="contact-form-card">
+                    <h3 class="contact-card-title">Send Us a Message</h3>
+                    <p class="contact-card-desc">Tell us about your project and we'll respond shortly.</p>
+
                     <form id="contactForm" class="contact-form">
                         <div class="form-row">
                             <div class="form-group">
@@ -120,8 +139,9 @@
                             <label for="newsletter">Subscribe to our newsletter for updates and offers</label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-large">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                        <button type="submit" class="contact-submit">
+                            <span>Send Message</span>
+                            <span class="contact-submit-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
                         </button>
                     </form>
 
@@ -137,93 +157,52 @@
                 </div>
 
                 <!-- Contact Information -->
-                <div class="contact-info-wrapper">
-                    <h2>Contact Information</h2>
-                    <p>Reach out to us through any of the following channels</p>
+                <div class="contact-info-card">
+                    <h3 class="contact-card-title">Contact Information</h3>
+                    <p class="contact-card-desc">Reach out to us through any of the following channels.</p>
 
-                    <div class="contact-info-cards">
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Visit Our Office</h3>
-                                <p>Bole Road, near Edna Mall<br>Addis Ababa, Ethiopia</p>
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <div class="contact-info-text">
+                                <strong>Visit Our Office</strong>
+                                <span>Bole Road, near Edna Mall<br>Addis Ababa, Ethiopia</span>
                             </div>
                         </div>
 
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Call Us</h3>
-                                <p>
-                                    Office: +251 11 XXX XXXX<br>
-                                    Mobile: +251 9XX XXX XXX
-                                </p>
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"><i class="fas fa-phone"></i></span>
+                            <div class="contact-info-text">
+                                <strong>Call Us</strong>
+                                <span>Office: +251 11 XXX XXXX<br>Mobile: +251 9XX XXX XXX</span>
                             </div>
                         </div>
 
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Email Us</h3>
-                                <p>
-                                    General: info@garaconstruction.com<br>
-                                    Sales: sales@garaconstruction.com
-                                </p>
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"><i class="fas fa-envelope"></i></span>
+                            <div class="contact-info-text">
+                                <strong>Email Us</strong>
+                                <span>General: info@garaconstruction.com<br>Sales: sales@garaconstruction.com</span>
                             </div>
                         </div>
 
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Business Hours</h3>
-                                <p>
-                                    Monday - Friday: 8:00 AM - 6:00 PM<br>
-                                    Saturday: 9:00 AM - 2:00 PM<br>
-                                    Sunday: Closed
-                                </p>
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon"><i class="fas fa-clock"></i></span>
+                            <div class="contact-info-text">
+                                <strong>Business Hours</strong>
+                                <span>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Closed</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Social Media -->
                     <div class="contact-social">
-                        <h3>Follow Us</h3>
-                        <div class="social-links-large">
-                            <a href="#" aria-label="Facebook">
-                                <i class="fab fa-facebook"></i>
-                                <span>Facebook</span>
-                            </a>
-                            <a href="#" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
-                                <span>Instagram</span>
-                            </a>
-                            <a href="#" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="#" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                                <span>Twitter</span>
-                            </a>
+                        <h4>Follow Us</h4>
+                        <div class="contact-social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         </div>
-                    </div>
-
-                    <!-- B2B Inquiry CTA -->
-                    <div class="b2b-cta">
-                        <div class="b2b-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3>B2B Partnerships</h3>
-                        <p>Are you a contractor, architect, or developer? Learn about our special B2B programs and bulk pricing.</p>
-                        <a href="#" class="btn btn-secondary">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -231,107 +210,110 @@
     </section>
 
     <!-- Map Section -->
-    <section class="map-section">
+    <section class="map-section-editorial">
         <div class="container">
-            <h2>Find Us on the Map</h2>
-        </div>
-        <div class="map-container">
-            <!-- Embedded Google Map -->
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5876773493895!2d38.76327631477976!3d9.010072693521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cf5e1a8c4f%3A0x6a9d4f58b7f3c0f6!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2s!4v1635789012345!5m2!1sen!2s" 
-                width="100%" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
+            <div class="map-header">
+                <div class="map-header-text">
+                    <span class="map-eyebrow">— FIND US —</span>
+                    <h2 class="map-title">Visit Our Office</h2>
+                </div>
+                <p class="map-sub">
+                    Drop by our office in Bole, Addis Ababa. We're open weekdays and Saturdays — coffee's on us.
+                </p>
+            </div>
+            <div class="map-card">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5876773493895!2d38.76327631477976!3d9.010072693521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cf5e1a8c4f%3A0x6a9d4f58b7f3c0f6!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2s!4v1635789012345!5m2!1sen!2s"
+                    width="100%"
+                    height="480"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">FAQs</span>
-                <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-header">
+                <div class="faq-header-text">
+                    <span class="faq-eyebrow">— QUESTIONS &amp; ANSWERS —</span>
+                    <h2 class="faq-title">Got Questions? We've Got You Covered.</h2>
+                </div>
+                <p class="faq-sub">
+                    Find quick answers to some of the most common inquiries about our services, process, and what it's like to build with us.
+                </p>
             </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What areas do you serve?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <button class="faq-question" type="button">
+                        <h3>What types of projects do you specialize in?</h3>
+                        <span class="faq-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </button>
                     <div class="faq-answer">
-                        <p>We serve clients throughout Ethiopia, with our main office in Addis Ababa. We can arrange delivery to major cities and project sites across the country.</p>
+                        <p>We work on residential, commercial, industrial, and infrastructure projects — tailored to your needs.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do you offer samples?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+                    <button class="faq-question" type="button">
+                        <h3>How do I get started with a project?</h3>
+                        <span class="faq-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Yes! We provide product samples for most of our materials. Contact us to request samples for your project, and our team will arrange delivery or pickup.</p>
+                        <p>Reach out via our contact form or call us — we'll schedule a consultation to discuss your vision, budget, and timeline, and guide you through every step of the process.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What is your return policy?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+                    <button class="faq-question" type="button">
+                        <h3>Are your projects delivered on time and within budget?</h3>
+                        <span class="faq-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </button>
                     <div class="faq-answer">
-                        <p>We accept returns of unopened, undamaged products within 30 days of purchase with the original receipt. Custom orders and cut materials are non-returnable.</p>
+                        <p>Yes. We pride ourselves on disciplined project management that keeps schedules and budgets on track, with clear communication from groundbreaking to handover.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do you provide installation services?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+                    <button class="faq-question" type="button">
+                        <h3>Do you handle permits and compliance?</h3>
+                        <span class="faq-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </button>
                     <div class="faq-answer">
-                        <p>While we focus on supplying materials, we can recommend experienced, trusted installation contractors from our network of partners.</p>
+                        <p>We manage the full permitting process and ensure every project meets local building codes, safety standards, and environmental regulations across Ethiopia.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How long does delivery take?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+                    <button class="faq-question" type="button">
+                        <h3>Can I customize my project design?</h3>
+                        <span class="faq-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </button>
                     <div class="faq-answer">
-                        <p>Delivery times vary depending on product availability and location. In-stock items within Addis Ababa typically deliver within 2-3 business days. Custom orders may take 2-6 weeks.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do you offer bulk pricing for contractors?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, we have special pricing programs for contractors, developers, and architects. Contact our B2B sales team to discuss volume pricing and partnership opportunities.</p>
+                        <p>Absolutely. Our architects and engineers work closely with you to bring your unique vision to life, with full flexibility on materials, layout, and finishes.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Download Catalog CTA -->
-    <section class="download-cta">
+    <!-- Download CTA -->
+    <section class="download-cta-card">
         <div class="container">
-            <div class="download-content">
-                <div class="download-icon">
+            <div class="download-card">
+                <div class="download-card-icon">
                     <i class="fas fa-file-pdf"></i>
                 </div>
-                <div class="download-text">
-                    <h2>Download Our Complete Product Catalog</h2>
-                    <p>Browse our full range of products with detailed specifications, pricing, and availability</p>
+                <div class="download-card-text">
+                    <h3>Download Our Product Catalog</h3>
+                    <p>Browse our full range of products with detailed specifications, pricing, and availability.</p>
                 </div>
-                <a href="#" class="btn btn-primary btn-large">
-                    <i class="fas fa-download"></i> Download PDF
+                <a href="#" class="featured-cta">
+                    <span>Download PDF</span>
+                    <span class="featured-cta-arrow"><i class="fas fa-download"></i></span>
                 </a>
             </div>
         </div>
