@@ -121,18 +121,25 @@
     }
     
     /* Footer improvements */
-    .footer-grid {
+    .footer-top,
+    .footer-nav-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1.5rem !important;
+    }
+
+    .footer-statement-row {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
-        text-align: center;
     }
-    
-    .footer-section {
-        text-align: center;
+
+    .footer-stay-connected {
+        text-align: left !important;
     }
-    
-    .social-links {
-        justify-content: center !important;
+
+    .footer-nav {
+        flex-direction: column !important;
+        gap: 0.8rem !important;
     }
     
     /* Banner adjustments */

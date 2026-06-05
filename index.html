@@ -10,93 +10,116 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Navigation (floating pill) -->
+    <div class="nav-pill-wrap">
         <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <h1>GARA</h1>
-                    <span>Construction Solutions PLC</span>
-                </div>
+            <nav class="nav-pill">
+                <a href="index.html" class="nav-pill-logo">
+                    <span class="logo-mark">G</span>
+                    <span class="logo-text">GARA</span>
+                </a>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu">
+                <ul class="nav-pill-menu">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="products.html">Products & Services</a></li>
+                    <li><a href="products.html">Our Services</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html" class="btn-contact">Contact Us</a></li>
+                    <li><a href="blog.html">Sustainability</a></li>
+                    <li><a href="contact.html">Careers</a></li>
                 </ul>
-            </div>
+                <a href="contact.html" class="nav-pill-cta">
+                    <span>Contact Us</span>
+                    <span class="nav-pill-cta-icon"><i class="fas fa-phone"></i></span>
+                </a>
+            </nav>
         </div>
-    </nav>
-    
+    </div>
+
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
     <!-- Hero Section -->
-    <section class="hero-modern">
-        <div class="hero-modern-content">
-            <div class="hero-badge">
-                <span>🏗️ Est. 2005</span>
-            </div>
-            <h1 class="hero-modern-title">
-                Building Tomorrow's<br>
-                <span class="gradient-text">Spaces Today</span>
-            </h1>
-            <p class="hero-modern-subtitle">
-                Premium construction finishing materials that transform<br class="desktop-break"> 
-                architectural visions into reality
-            </p>
-            <div class="hero-modern-buttons">
-                <a href="products.html" class="btn-modern btn-modern-primary">
-                    Explore Products
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="contact.html" class="btn-modern btn-modern-secondary">
-                    <i class="fas fa-phone"></i>
-                    Get in Touch
-                </a>
-            </div>
-            <div class="hero-stats-minimal">
-                <div class="hero-stat-item">
-                    <strong>20+</strong>
-                    <span>Years Experience</span>
-                </div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat-item">
-                    <strong>500+</strong>
-                    <span>Projects Completed</span>
-                </div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat-item">
-                    <strong>1000+</strong>
-                    <span>Happy Clients</span>
-                </div>
-            </div>
-        </div>
-        <div class="hero-modern-image">
-            <div class="hero-image-card">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=1000&fit=crop" alt="Modern Architecture">
-                <div class="hero-image-overlay">
-                    <div class="quality-badge">
-                        <i class="fas fa-award"></i>
-                        <span>Premium Quality</span>
+    <section class="hero-arkonex">
+        <div class="container hero-arkonex-inner">
+            <div class="hero-grid">
+                <!-- LEFT col: one big yellow card + one small white card below -->
+                <div class="hero-col hero-col-left">
+                    <!-- BIG yellow card: video + headline -->
+                    <div class="hero-card hero-card-yellow hero-card-top">
+                        <div class="hero-media-frame">
+                            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1400&h=1000&fit=crop" alt="Construction workers on a steel beam">
+                            <button class="hero-play-btn" aria-label="Play video">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                        <h1 class="hero-arkonex-title">Building Tomorrow<br>with Vision</h1>
+                    </div>
+                    <!-- SMALL white card: desc + buttons -->
+                    <div class="hero-card hero-card-white hero-card-text">
+                        <p class="hero-arkonex-desc">
+                            We build iconic infrastructures that transform city skylines, 
+                            strengthen communities, boost economic growth, and leave a 
+                            lasting mark of innovation around the world.
+                        </p>
+                        <div class="hero-cta-row">
+                            <a href="contact.html" class="hero-btn hero-btn-dark">
+                                <span>Get Started</span>
+                                <span class="hero-btn-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                            <a href="projects.html" class="hero-btn hero-btn-outline">
+                                <span class="hero-btn-play"><i class="fas fa-play"></i></span>
+                                <span>Watch Video</span>
+                            </a>
+                        </div>
+                        <!-- Circle badge anchored at top-right of the white card -->
+                        <div class="hero-circle" aria-hidden="true">
+                            <div class="hero-circle-rotate">
+                                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <path id="circlePath" d="M 100,100 m -82,0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0"/>
+                                    </defs>
+                                    <text>
+                                        <textPath href="#circlePath" startOffset="0">
+                                            Elevating our skylines . Every single day . Engineering strength .
+                                        </textPath>
+                                    </text>
+                                </svg>
+                            </div>
+                            <div class="hero-circle-core">
+                                <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" class="hero-circle-star">
+                                    <path d="M30 0 L33 27 L60 30 L33 33 L30 60 L27 33 L0 30 L27 27 Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="floating-card floating-card-1">
-                <i class="fas fa-check-circle"></i>
-                <span>ISO Certified</span>
-            </div>
-            <div class="floating-card floating-card-2">
-                <i class="fas fa-globe"></i>
-                <span>Global Brands</span>
-            </div>
+
+                <!-- RIGHT: Big image card -->
+                <div class="hero-col hero-col-right">
+                    <div class="hero-card hero-card-trolly">
+                        <img src="images/trolly.png" alt="Construction crane and city skyline">
+                        <div class="hero-trolly-stats">
+                            <div class="trolly-stat">
+                                <strong>200+</strong>
+                                <span>Projects Completed</span>
+                            </div>
+                            <div class="trolly-stat">
+                                <strong>15+</strong>
+                                <span>Years of Experience</span>
+                            </div>
+                            <div class="trolly-stat">
+                                <strong>99%</strong>
+                                <span>Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end hero-grid -->
         </div>
     </section>
 
@@ -104,133 +127,130 @@
     <section class="about-preview">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop" alt="GARA Construction Solutions">
-                    <div class="experience-badge">
-                        <span class="badge-number">20+</span>
-                        <span class="badge-text">Years of Quality</span>
-                    </div>
+                <div class="about-eyebrow-col">
+                    <span class="about-eyebrow">— ABOUT US —</span>
                 </div>
-                <div class="about-content">
-                    <span class="section-label">About GARA</span>
-                    <h2 class="section-title">Leading the Way in Construction Excellence</h2>
-                    <p class="section-description">
-                        GARA Construction Solutions PLC is a premier Ethiopian company specializing in the import and distribution 
-                        of high-quality, contemporary construction finishing materials. With over two decades of experience, we have 
-                        established ourselves as the trusted partner for residential and commercial projects across Ethiopia.
+                <div class="about-content-col">
+                    <h2 class="about-statement">
+                        Bringing your vision to life. We transform bold ideas into durable and eco-conscious structures, guided by decades of experience and a relentless commitment to precision in every detail of construction.
+                    </h2>
+                    <p class="about-sub">
+                        We combine innovation, craftsmanship, and technical excellence to deliver projects that not only meet expectations — but redefine them. Our team is dedicated to building with purpose, precision, and lasting value.
                     </p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check-circle"></i> Premium Quality Materials</li>
-                        <li><i class="fas fa-check-circle"></i> Innovative Solutions</li>
-                        <li><i class="fas fa-check-circle"></i> Reliable Supply Chain</li>
-                        <li><i class="fas fa-check-circle"></i> Expert Consultation</li>
-                    </ul>
-                    <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+                    <a href="about.html" class="about-cta">
+                        <span>Get Started</span>
+                        <span class="about-cta-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products-preview">
+    <!-- Works Section -->
+    <section class="works-preview">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Products</span>
-                <h2 class="section-title">Premium Construction Finishing Materials</h2>
-                <p class="section-description">
-                    Discover our comprehensive range of high-quality finishing materials sourced from leading international brands
-                </p>
-            </div>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-th-large"></i>
-                    </div>
-                    <h3>Flooring Solutions</h3>
-                    <p>Premium tiles, hardwood, laminate, and luxury vinyl flooring options</p>
-                    <a href="products.html#flooring" class="product-link">Explore <i class="fas fa-arrow-right"></i></a>
+            <div class="works-header">
+                <div class="works-header-text">
+                    <span class="works-eyebrow">— OUR WORKS —</span>
+                    <h2 class="works-title">Delivering impact through every structure we create</h2>
                 </div>
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-paint-roller"></i>
-                    </div>
-                    <h3>Wall Cladding</h3>
-                    <p>Modern wall finishes, panels, and decorative cladding systems</p>
-                    <a href="products.html#wall-cladding" class="product-link">Explore <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-grip-lines"></i>
-                    </div>
-                    <h3>Ceiling Systems</h3>
-                    <p>Contemporary ceiling solutions for commercial and residential spaces</p>
-                    <a href="products.html#ceiling" class="product-link">Explore <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-sink"></i>
-                    </div>
-                    <h3>Sanitary Fixtures</h3>
-                    <p>High-quality bathroom fixtures and fittings from top brands</p>
-                    <a href="products.html#sanitary" class="product-link">Explore <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-fill-drip"></i>
-                    </div>
-                    <h3>Paints & Coatings</h3>
-                    <p>Premium paint solutions for interior and exterior applications</p>
-                    <a href="products.html#paints" class="product-link">Explore <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h3>Decorative Products</h3>
-                    <p>Elegant decorative elements and finishing touches</p>
-                    <a href="products.html#decorative" class="product-link">Explore <i class="fas fa-arrow-right"></i></a>
+                <div class="works-nav">
+                    <button class="works-nav-btn" aria-label="Previous project">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button class="works-nav-btn works-nav-btn-dark" aria-label="Next project">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
-            <div class="text-center">
-                <a href="products.html" class="btn btn-primary btn-large">View All Products</a>
+            <p class="works-sub">
+                Every project is a reflection of our dedication to quality, innovation, and purpose. From urban landmarks to essential community spaces — we build with integrity and intention.
+            </p>
+            <div class="works-grid">
+                <article class="work-card">
+                    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&h=1200&fit=crop" alt="Urban Mixed-Use Complex">
+                    <div class="work-card-overlay">
+                        <h3 class="work-card-title">Urban Mixed-Use Complex in Addis Ababa</h3>
+                        <p class="work-card-desc">A modern development combining commercial and residential spaces with sustainable features and smart design.</p>
+                        <div class="work-card-tags">
+                            <span class="work-tag">#MixedUse</span>
+                            <span class="work-tag">#8Months</span>
+                            <span class="work-tag">#4,200m²</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="work-card">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&h=1200&fit=crop" alt="Healthcare Facility Expansion">
+                    <div class="work-card-overlay">
+                        <h3 class="work-card-title">Healthcare Facility Expansion in Adama</h3>
+                        <p class="work-card-desc">Upgrading hospital infrastructure to improve patient capacity and operational efficiency.</p>
+                        <div class="work-card-tags">
+                            <span class="work-tag">#Healthcare</span>
+                            <span class="work-tag">#Completed</span>
+                            <span class="work-tag">#3,100m²</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="work-card">
+                    <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=900&h=1200&fit=crop" alt="Eco-Friendly Housing Project">
+                    <div class="work-card-overlay">
+                        <h3 class="work-card-title">Eco-Friendly Housing Project in Hawassa</h3>
+                        <p class="work-card-desc">A cluster of energy-efficient homes built with local materials and green construction methods.</p>
+                        <div class="work-card-tags">
+                            <span class="work-tag">#GreenBuild</span>
+                            <span class="work-tag">#Ongoing</span>
+                            <span class="work-tag">#1,500m²</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects-preview">
+    <!-- Featured Project Section -->
+    <section class="featured-project">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Portfolio</span>
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-description">
-                    Explore our portfolio of successful residential and commercial projects
+            <div class="featured-header">
+                <div class="featured-header-text">
+                    <span class="featured-eyebrow">— FEATURED PROJECT —</span>
+                    <h2 class="featured-title">Our latest milestone in Addis Ababa</h2>
+                </div>
+                <p class="featured-sub">
+                    A landmark commercial development that showcases our commitment to quality craftsmanship, sustainable materials, and architectural precision.
                 </p>
             </div>
-            <div class="projects-slider">
-                <div class="project-slide">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop" alt="Luxury Hotel Project">
-                    <div class="project-overlay">
-                        <h3>Luxury Hotel Addis Ababa</h3>
-                        <p>Complete interior finishing with premium materials</p>
-                        <a href="projects.html" class="btn btn-light">View Project</a>
+            <article class="featured-card">
+                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&h=900&fit=crop" alt="Skyline Tower Addis Ababa">
+                <div class="featured-overlay">
+                    <div class="featured-tags">
+                        <span class="featured-tag">#Commercial</span>
+                        <span class="featured-tag">#14Months</span>
+                        <span class="featured-tag">#8,500m²</span>
                     </div>
+                    <h3 class="featured-card-title">Skyline Tower — A new landmark for the city</h3>
+                    <p class="featured-card-desc">A 12-story commercial complex combining premium office spaces, retail outlets, and sustainable design features that set a new standard for Addis Ababa's skyline.</p>
+                    <a href="projects.html" class="featured-cta">
+                        <span>View Project</span>
+                        <span class="featured-cta-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </a>
                 </div>
-                <div class="project-slide">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" alt="Commercial Complex">
-                    <div class="project-overlay">
-                        <h3>Modern Commercial Complex</h3>
-                        <p>Contemporary flooring and wall cladding solutions</p>
-                        <a href="projects.html" class="btn btn-light">View Project</a>
-                    </div>
+            </article>
+            <div class="featured-stats">
+                <div class="featured-stat">
+                    <strong>200+</strong>
+                    <span>Projects Completed</span>
                 </div>
-                <div class="project-slide">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop" alt="Residential Villa">
-                    <div class="project-overlay">
-                        <h3>Premium Residential Villa</h3>
-                        <p>Elegant finishing materials throughout</p>
-                        <a href="projects.html" class="btn btn-light">View Project</a>
-                    </div>
+                <div class="featured-stat">
+                    <strong>15+</strong>
+                    <span>Years of Experience</span>
+                </div>
+                <div class="featured-stat">
+                    <strong>99%</strong>
+                    <span>Happy Clients</span>
+                </div>
+                <div class="featured-stat">
+                    <strong>50+</strong>
+                    <span>Expert Team</span>
                 </div>
             </div>
         </div>
@@ -238,61 +258,67 @@
 
     <!-- Testimonials Section -->
     <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Client Testimonials</span>
-                <h2 class="section-title">What Our Clients Say</h2>
-            </div>
-            <div class="testimonials-carousel">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+        <div class="testimonials-card">
+            <div class="container">
+                <div class="testimonials-header">
+                    <div class="testimonials-header-text">
+                        <span class="testimonials-eyebrow">— TESTIMONIALS —</span>
+                        <h2 class="testimonials-title">Hear from those who've built with us</h2>
                     </div>
-                    <p class="testimonial-text">
-                        "GARA has been our trusted partner for over 5 years. Their quality materials and professional 
-                        service have been instrumental in delivering exceptional projects to our clients."
-                    </p>
-                    <div class="testimonial-author">
-                        <h4>Alemayehu Tadesse</h4>
-                        <span>CEO, Urban Construction Ltd.</span>
+                    <div class="testimonials-nav">
+                        <button class="testimonials-nav-btn testimonials-nav-btn-prev" aria-label="Previous testimonial">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <button class="testimonials-nav-btn testimonials-nav-btn-dark testimonials-nav-btn-next" aria-label="Next testimonial">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <p class="testimonials-sub">
+                    Real client stories — sharing their experience with our team. From start to finish, we focus on quality and making the process worry-free.
+                </p>
+                <div class="testimonials-carousel">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-portrait">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop" alt="Samuel T">
+                            <div class="testimonial-portrait-info">
+                                <strong>Samuel T</strong>
+                                <span>Property Developer</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote-area">
+                            <div class="testimonial-quote-mark testimonial-quote-open">&ldquo;</div>
+                            <p class="testimonial-quote-text">Their attention to detail and commitment to our vision truly set them apart. The project was completed on time, on budget, and beyond expectations.</p>
+                            <div class="testimonial-quote-mark testimonial-quote-close">&rdquo;</div>
+                        </div>
                     </div>
-                    <p class="testimonial-text">
-                        "The range and quality of products available at GARA is unmatched. They helped us achieve 
-                        the perfect finish for our luxury hotel project."
-                    </p>
-                    <div class="testimonial-author">
-                        <h4>Sara Mohammed</h4>
-                        <span>Project Manager, Skyline Developers</span>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-portrait">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop" alt="Sara Mohammed">
+                            <div class="testimonial-portrait-info">
+                                <strong>Sara Mohammed</strong>
+                                <span>Project Manager</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote-area">
+                            <div class="testimonial-quote-mark testimonial-quote-open">&ldquo;</div>
+                            <p class="testimonial-quote-text">Working with GARA on our hotel project was a fantastic experience. Their team provided expert guidance in material selection and ensured timely delivery throughout.</p>
+                            <div class="testimonial-quote-mark testimonial-quote-close">&rdquo;</div>
+                        </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Professional, reliable, and always delivering on time. GARA Construction Solutions 
-                        is our go-to supplier for all premium finishing materials."
-                    </p>
-                    <div class="testimonial-author">
-                        <h4>David Bekele</h4>
-                        <span>Architect, Modern Design Studio</span>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-portrait">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=750&fit=crop" alt="David Bekele">
+                            <div class="testimonial-portrait-info">
+                                <strong>David Bekele</strong>
+                                <span>Architect</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-quote-area">
+                            <div class="testimonial-quote-mark testimonial-quote-open">&ldquo;</div>
+                            <p class="testimonial-quote-text">The quality of materials and professionalism displayed by GARA exceeded our expectations. Our office complex looks stunning thanks to their premium products.</p>
+                            <div class="testimonial-quote-mark testimonial-quote-close">&rdquo;</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -302,80 +328,56 @@
     <!-- Blog Preview Section -->
     <section class="blog-preview">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Blog</span>
-                <h2 class="section-title">Latest Insights & Trends</h2>
-                <p class="section-description">
-                    Stay updated with the latest construction trends and industry innovations
+            <div class="blog-header">
+                <div class="blog-header-text">
+                    <span class="blog-eyebrow">— INSIGHTS & UPDATES —</span>
+                    <h2 class="blog-title">Explore the Stories Behind the Structures</h2>
+                </div>
+                <p class="blog-sub">
+                    From new ideas to project highlights and practical tips. our blog shares insights that shape the future of construction.
                 </p>
             </div>
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=800&h=500&fit=crop" alt="Modern Flooring Trends">
-                        <span class="blog-category">Trends</span>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-date"><i class="far fa-calendar"></i> October 28, 2025</span>
-                        <h3>Modern Flooring Trends for 2025</h3>
-                        <p>Discover the latest trends in flooring materials and design that are transforming spaces...</p>
-                        <a href="blog.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800&h=500&fit=crop" alt="Sustainable Construction">
-                        <span class="blog-category">Sustainability</span>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-date"><i class="far fa-calendar"></i> October 25, 2025</span>
-                        <h3>Sustainable Materials in Construction</h3>
-                        <p>How eco-friendly materials are revolutionizing the construction industry...</p>
-                        <a href="blog.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+            <div class="blog-layout">
+                <article class="blog-featured">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&h=1400&fit=crop" alt="5 Ways Technology is Transforming Modern Construction">
+                    <div class="blog-featured-overlay">
+                        <h3 class="blog-featured-title">5 Ways Technology is Transforming Modern Construction</h3>
+                        <p class="blog-featured-desc">Discover how digital tools, automation, and smart materials are changing the way we build.</p>
+                        <a href="blog.html" class="blog-featured-cta">
+                            <span>Discover more</span>
+                            <span class="blog-featured-cta-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </a>
                     </div>
                 </article>
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop" alt="Luxury Finishing">
-                        <span class="blog-category">Design</span>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-date"><i class="far fa-calendar"></i> October 20, 2025</span>
-                        <h3>Creating Luxury with Premium Finishes</h3>
-                        <p>Expert tips on selecting and applying premium finishing materials for high-end projects...</p>
-                        <a href="blog.html" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Start Your Next Project?</h2>
-                <p>Partner with GARA Construction Solutions for premium quality materials and expert service</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-large">Request a Quote</a>
-                    <a href="products.html" class="btn btn-light btn-large">Browse Products</a>
+                <div class="blog-list">
+                    <a href="blog.html" class="blog-list-item">
+                        <div class="blog-list-image">
+                            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&h=400&fit=crop" alt="Commercial Project in Addis Ababa">
+                        </div>
+                        <div class="blog-list-content">
+                            <h4>Inside Our Latest Commercial Project in Addis Ababa</h4>
+                            <p>A behind-the-scenes look at how we delivered impact and efficiency on a tight timeline.</p>
+                        </div>
+                    </a>
+                    <a href="blog.html" class="blog-list-item">
+                        <div class="blog-list-image">
+                            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=500&h=400&fit=crop" alt="Sustainable Building">
+                        </div>
+                        <div class="blog-list-content">
+                            <h4>Why Sustainable Building Matters More Than Ever</h4>
+                            <p>Learn how eco-conscious design is becoming essential in today's construction landscape.</p>
+                        </div>
+                    </a>
+                    <a href="blog.html" class="blog-list-item">
+                        <div class="blog-list-image">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500&h=400&fit=crop" alt="Blueprint to Reality">
+                        </div>
+                        <div class="blog-list-content">
+                            <h4>From Blueprint to Reality: How We Manage Complex Projects</h4>
+                            <p>An inside look at our step-by-step process for delivering successful large-scale builds.</p>
+                        </div>
+                    </a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <div class="newsletter-text">
-                    <h3>Stay Updated</h3>
-                    <p>Subscribe to our newsletter for the latest products, trends, and exclusive offers</p>
-                </div>
-                <form class="newsletter-form" id="newsletterForm">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
             </div>
         </div>
     </section>
@@ -383,57 +385,47 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <h3>GARA</h3>
-                        <span>Construction Solutions PLC</span>
+            <div class="footer-top">
+                <a href="index.html" class="footer-brand">
+                    <span class="footer-brand-mark">G</span>
+                    <span>GARA</span>
+                </a>
+                <p class="footer-stay-connected">
+                    Let's stay connected — get the latest updates, insights, and stories from the field.
+                </p>
+            </div>
+
+            <div class="footer-statement-row">
+                <h2 class="footer-statement">Building better cities, one project at a time</h2>
+                <form class="footer-subscribe" onsubmit="event.preventDefault();">
+                    <label for="footer-email" class="footer-subscribe-label">Subscribe to Our Updates:</label>
+                    <div class="footer-subscribe-field">
+                        <input type="email" id="footer-email" placeholder="Enter your email address" required>
+                        <button type="submit" aria-label="Subscribe">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
-                    <p>Over 20 years of excellence in providing premium construction finishing materials to Ethiopia.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Products & Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Products</h4>
-                    <ul>
-                        <li><a href="products.html#flooring">Flooring Solutions</a></li>
-                        <li><a href="products.html#wall-cladding">Wall Cladding</a></li>
-                        <li><a href="products.html#ceiling">Ceiling Systems</a></li>
-                        <li><a href="products.html#sanitary">Sanitary Fixtures</a></li>
-                        <li><a href="products.html#paints">Paints & Coatings</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Info</h4>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</li>
-                        <li><i class="fas fa-phone"></i> +251 11 XXX XXXX</li>
-                        <li><i class="fas fa-envelope"></i> info@garaconstruction.com</li>
-                        <li><i class="fas fa-clock"></i> Mon - Fri: 8:00 AM - 6:00 PM</li>
-                    </ul>
+                </form>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-nav-row">
+                <nav class="footer-nav">
+                    <a href="about.html">Our Expertise</a>
+                    <a href="projects.html">Featured Projects</a>
+                    <a href="blog.html">Insights & News</a>
+                    <a href="about.html">Who We Are</a>
+                </nav>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 GARA Construction Solutions PLC. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
+
+            <p class="footer-copyright">© 2025 GARA Construction Solutions PLC — All rights reserved</p>
         </div>
     </footer>
 

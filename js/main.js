@@ -8,16 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ========== MOBILE NAVIGATION ==========
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const navbar = document.querySelector('.navbar');
+    const navMenu = document.querySelector('.nav-pill-menu') || document.querySelector('.nav-menu');
+    const navPill = document.querySelector('.nav-pill');
+    const navbar = document.querySelector('.navbar') || navPill;
+    const overlay = document.querySelector('.mobile-menu-overlay');
     const body = document.body;
     
-    if (mobileMenuToggle) {
+    if (mobileMenuToggle && navMenu) {
         mobileMenuToggle.addEventListener('click', function(e) {
             e.stopPropagation();
             const isActive = navMenu.classList.toggle('active');
             this.classList.toggle('active');
-            navbar.classList.toggle('menu-open', isActive);
+            if (overlay) overlay.classList.toggle('active', isActive);
+            if (navPill) navPill.classList.toggle('menu-open', isActive);
+            if (navbar) navbar.classList.toggle('menu-open', isActive);
             
             // Prevent body scroll when menu is open
             if (isActive) {
@@ -28,22 +32,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Close menu when clicking on overlay
-        navbar.addEventListener('click', function(e) {
-            if (navbar.classList.contains('menu-open') && !navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        if (overlay) {
+            overlay.addEventListener('click', function() {
                 navMenu.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
-                navbar.classList.remove('menu-open');
+                overlay.classList.remove('active');
+                if (navPill) navPill.classList.remove('menu-open');
+                if (navbar) navbar.classList.remove('menu-open');
                 body.style.overflow = '';
-            }
-        });
+            });
+        }
         
         // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('.nav-menu a');
+        const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
-                navbar.classList.remove('menu-open');
+                if (overlay) overlay.classList.remove('active');
+                if (navPill) navPill.classList.remove('menu-open');
+                if (navbar) navbar.classList.remove('menu-open');
                 body.style.overflow = '';
             });
         });
@@ -53,7 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.key === 'Escape' && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 mobileMenuToggle.classList.remove('active');
-                navbar.classList.remove('menu-open');
+                if (overlay) overlay.classList.remove('active');
+                if (navPill) navPill.classList.remove('menu-open');
+                if (navbar) navbar.classList.remove('menu-open');
                 body.style.overflow = '';
             }
         });
@@ -61,18 +71,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ========== STICKY NAVBAR ON SCROLL ==========
     let lastScroll = 0;
+    const stickyNav = navPill || navbar;
     
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-        } else {
-            navbar.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
-        }
-        
-        lastScroll = currentScroll;
-    });
+    if (stickyNav) {
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                stickyNav.style.boxShadow = '0 6px 30px rgba(0,0,0,0.1)';
+            } else {
+                stickyNav.style.boxShadow = '0 6px 30px rgba(0,0,0,0.08)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    }
     
     // ========== ANIMATED COUNTER FOR STATS ==========
     const statsNumbers = document.querySelectorAll('.stat-number');
@@ -451,31 +464,38 @@ document.addEventListener('DOMContentLoaded', function() {
     
     animateOnScroll();
     
-    // ========== TESTIMONIAL CAROUSEL (if needed) ==========
+    // ========== TESTIMONIAL CAROUSEL ==========
     const testimonialCarousel = document.querySelector('.testimonials-carousel');
-    
-    if (testimonialCarousel && testimonialCarousel.children.length > 3) {
-        let currentIndex = 0;
-        const cards = Array.from(testimonialCarousel.children);
-        const cardsToShow = 3;
-        
-        const showCards = (index) => {
-            cards.forEach((card, i) => {
-                if (i >= index && i < index + cardsToShow) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+
+    if (testimonialCarousel) {
+        const slides = Array.from(testimonialCarousel.querySelectorAll('.testimonial-slide'));
+        const prevBtn = document.querySelector('.testimonials-nav-btn-prev');
+        const nextBtn = document.querySelector('.testimonials-nav-btn-next');
+        let currentIndex = slides.findIndex(s => s.classList.contains('active'));
+        if (currentIndex < 0) currentIndex = 0;
+
+        const showSlide = (index) => {
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
             });
         };
-        
-        // Auto-rotate testimonials every 5 seconds
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % (cards.length - cardsToShow + 1);
-            showCards(currentIndex);
-        }, 5000);
-        
-        showCards(currentIndex);
+
+        if (slides.length > 0) {
+            showSlide(currentIndex);
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    showSlide(currentIndex);
+                });
+            }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                });
+            }
+        }
     }
     
     // ========== BLOG SEARCH ==========
