@@ -7,7 +7,6 @@
     <title>Blog - GARA Construction Solutions PLC</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile-enhancements.css">
-    <link rel="stylesheet" href="css/blog-modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -44,151 +43,85 @@
     <div class="mobile-menu-overlay"></div>
 
     <!-- Page Header -->
-    <section class="page-banner">
-        <div class="banner-content">
-            <span class="banner-label">Insights & News</span>
-            <h1 class="banner-title">Our<br><span class="gradient-text">Blog</span></h1>
-            <p class="banner-subtitle">Expert insights, trends, and innovations in construction</p>
+    <section class="page-banner-editorial">
+        <div class="container">
+            <div class="banner-editorial-header">
+                <div class="banner-editorial-text">
+                    <span class="banner-editorial-eyebrow">— INSIGHTS & NEWS —</span>
+                    <h1 class="banner-editorial-title">Our Blog</h1>
+                </div>
+                <p class="banner-editorial-sub">
+                    Expert insights, trends, and innovations in construction — practical knowledge from the field, shared by the people who build with it.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Blog Categories and Search -->
     <section class="blog-categories">
         <div class="container">
-            <div class="blog-filters-bar">
-                <div class="categories-scroll">
-                    <a href="#" class="category-tag active" data-category="all">All Posts</a>
-                    <a href="#" class="category-tag" data-category="trends">Trends</a>
-                    <a href="#" class="category-tag" data-category="materials">Materials</a>
-                    <a href="#" class="category-tag" data-category="design">Design</a>
-                    <a href="#" class="category-tag" data-category="sustainability">Sustainability</a>
-                    <a href="#" class="category-tag" data-category="how-to">How-To</a>
-                </div>
-                <div class="blog-search">
-                    <input type="text" id="blogSearch" placeholder="Search articles...">
-                    <button type="button"><i class="fas fa-search"></i></button>
-                </div>
+            <div class="categories-scroll">
+                <a href="#" class="category-tag active" data-category="all">All Posts</a>
+                <a href="#" class="category-tag" data-category="trends">Trends</a>
+                <a href="#" class="category-tag" data-category="materials">Materials</a>
+                <a href="#" class="category-tag" data-category="design">Design</a>
+                <a href="#" class="category-tag" data-category="sustainability">Sustainability</a>
+                <a href="#" class="category-tag" data-category="how-to">How-To</a>
+            </div>
+            <div class="search-wrapper">
+                <input type="text" id="blogSearch" placeholder="Search articles..." class="search-input">
+                <button class="search-btn" type="button" aria-label="Search"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </section>
 
     <!-- Featured Post -->
-    <section class="featured-post">
+    <section class="featured-post-editorial">
         <div class="container">
-            <div class="featured-content">
-                <div class="featured-image">
+            <article class="featured-post-card">
+                <div class="featured-post-image">
                     <img src="images/blog/featured.jpg" alt="Featured Article">
                 </div>
-                <div class="featured-text">
-                    <span class="blog-category">Featured Article</span>
-                    <h2>The Future of Construction Materials: Sustainable and Smart Solutions</h2>
+                <div class="featured-post-body">
+                    <span class="featured-post-eyebrow">— FEATURED ARTICLE —</span>
+                    <h2 class="featured-post-title">The Future of Construction Materials: Sustainable and Smart Solutions</h2>
                     <p class="blog-meta">
                         <span><i class="far fa-calendar"></i> November 1, 2025</span>
                         <span><i class="far fa-user"></i> By Tigist Bekele</span>
                         <span><i class="far fa-clock"></i> 8 min read</span>
                     </p>
-                    <p class="featured-excerpt">
+                    <p class="featured-post-excerpt">
                         Explore how sustainable materials and smart technologies are revolutionizing the construction 
                         industry. From eco-friendly flooring to energy-efficient ceiling systems, discover the innovations 
                         that are shaping tomorrow's buildings today.
                     </p>
-                    <a href="#" class="btn btn-primary">Read Full Article</a>
+                    <a href="#" class="featured-post-cta">
+                        <span>Read Full Article</span>
+                        <span class="featured-post-cta-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                    </a>
                 </div>
-            </div>
+            </article>
         </div>
     </section>
 
     <!-- Blog Grid -->
     <section class="blog-section">
         <div class="container">
-            <div class="blog-main">
-                <div class="blog-posts">
-                    <!-- Loading placeholder -->
-                    <div class="loading-message" style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #999;">
-                        <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 1rem;"></i>
-                        <p>Loading blog posts...</p>
-                    </div>
+            <div class="blog-section-header">
+                <div class="blog-section-header-text">
+                    <span class="blog-section-eyebrow">— LATEST ARTICLES —</span>
+                    <h2 class="blog-section-title">Stories from the Field</h2>
                 </div>
-
-                <!-- Sidebar removed -->
-                <aside class="blog-sidebar" style="display: none;">
-                    <!-- Search -->
-                    <div class="sidebar-widget">
-                        <h3>Search Blog</h3>
-                        <form class="blog-search-form">
-                            <input type="text" placeholder="Search articles...">
-                            <button type="submit"><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-
-                    <!-- Popular Posts -->
-                    <div class="sidebar-widget">
-                        <h3>Popular Posts</h3>
-                        <div class="popular-posts">
-                            <a href="#" class="popular-post">
-                                <img src="images/blog/thumb1.jpg" alt="Post">
-                                <div>
-                                    <h4>Modern Flooring Trends 2025</h4>
-                                    <span>October 28, 2025</span>
-                                </div>
-                            </a>
-                            <a href="#" class="popular-post">
-                                <img src="images/blog/thumb2.jpg" alt="Post">
-                                <div>
-                                    <h4>Sustainable Materials Guide</h4>
-                                    <span>October 25, 2025</span>
-                                    
-                                </div>
-                            </a>
-                            <a href="#" class="popular-post">
-                                <img src="images/blog/thumb3.jpg" alt="Post">
-                                <div>
-                                    <h4>Luxury Finishing Tips</h4>
-                                    <span>October 20, 2025</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Categories -->
-                    <div class="sidebar-widget">
-                        <h3>Categories</h3>
-                        <ul class="category-list">
-                            <li><a href="#">Trends <span>(15)</span></a></li>
-                            <li><a href="#">Materials <span>(12)</span></a></li>
-                            <li><a href="#">Design <span>(18)</span></a></li>
-                            <li><a href="#">Sustainability <span>(9)</span></a></li>
-                            <li><a href="#">How-To Guides <span>(14)</span></a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Newsletter -->
-                    <div class="sidebar-widget newsletter-widget">
-                        <h3>Subscribe to Our Newsletter</h3>
-                        <p>Get the latest articles and updates delivered to your inbox</p>
-                        <form class="sidebar-newsletter-form">
-                            <input type="email" placeholder="Your email address" required>
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                        </form>
-                    </div>
-
-                    <!-- Tags -->
-                    <div class="sidebar-widget">
-                        <h3>Popular Tags</h3>
-                        <div class="tag-cloud">
-                            <a href="#" class="tag">Flooring</a>
-                            <a href="#" class="tag">Design</a>
-                            <a href="#" class="tag">Tiles</a>
-                            <a href="#" class="tag">Sustainability</a>
-                            <a href="#" class="tag">Modern</a>
-                            <a href="#" class="tag">Bathroom</a>
-                            <a href="#" class="tag">Commercial</a>
-                            <a href="#" class="tag">Residential</a>
-                            <a href="#" class="tag">Luxury</a>
-                            <a href="#" class="tag">Paint</a>
-                        </div>
-                    </div>
-                </aside>
+                <p class="blog-section-sub">
+                    A curated feed of articles, guides, and project highlights — written for the people who design, build, and care about how things are made.
+                </p>
+            </div>
+            <div class="blog-posts-grid blog-posts">
+                <!-- Loading placeholder -->
+                <div class="loading-message" style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--hero-muted);">
+                    <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 1rem; color: var(--hero-yellow);"></i>
+                    <p>Loading blog posts...</p>
+                </div>
             </div>
 
             <!-- Pagination -->
@@ -206,6 +139,7 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
+                <span class="cta-eyebrow">— EXPERT ADVICE —</span>
                 <h2>Need Expert Advice for Your Project?</h2>
                 <p>Our technical team is ready to help you select the perfect materials</p>
                 <div class="cta-buttons">
